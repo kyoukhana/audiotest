@@ -10,7 +10,7 @@
     "babel-loader": "^8.1.0",
     "core-js": "^3.6.4",
     "lodash": "^4.17.15",
-    "musquito": "^2.0.0-beta",
+    "musquito": "^2.0.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {

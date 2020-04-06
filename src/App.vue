@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  
+    <button v-on:click="play">Play</button>
   </div>
 </template>
 
@@ -13,6 +14,21 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods:{
+    play: function (event) {
+			// var buzz = $buzz('https://raw.githubusercontent.com/Tonejs/Tone.js/master/examples/audio/FWDL.mp3');
+			// console.log(buzz);
+      // buzz.play();
+      
+      var buzz = $buzz({
+          url: 'https://raw.githubusercontent.com/Tonejs/Tone.js/master/examples/audio/FWDL.mp3',
+          onloadprogress: function(percentage) {
+          console.log(percentage);
+          }
+      })
+    }
+  
   }
 }
 </script>
