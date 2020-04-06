@@ -21,14 +21,18 @@ export default {
 			// console.log(buzz);
       // buzz.play();
       
-      var buzz = $buzz({
-          url: 'https://raw.githubusercontent.com/Tonejs/Tone.js/master/examples/audio/FWDL.mp3',
-          onloadprogress: function(percentage) {
-          console.log(percentage);
-          }
-      })
+      var buzz = $buzz();
+      $buzz.setup();
+      
+      $buzz.load('https://raw.githubusercontent.com/Tonejs/Tone.js/master/examples/audio/FWDL.mp3', function(evtData){
+        console.log(evtData.url);
+        console.log(evtData.percentageDownloaded);
+      });
+
     }
-  
+    
+
+    
   }
 }
 </script>
